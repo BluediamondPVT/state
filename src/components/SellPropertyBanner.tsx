@@ -39,7 +39,7 @@ export default function SellPropertyBanner() {
                 </Link>
 
                 <a
-                  href={`https://wa.me/${AGENCY_CONFIG.whatsapp}?text=${encodeURIComponent('Hello, I want to sell/rent my property in Bhiwandi. Please contact me.')}`}
+                  href={`https://wa.me/${AGENCY_CONFIG.whatsapp}?text=${encodeURIComponent('Hello Taimur Bhai, I want to sell/rent my property in Bhiwandi. Please contact me.')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-lg py-3 px-4 fw-bold btn-success text-white"

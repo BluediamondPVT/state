@@ -5,9 +5,9 @@ import Footer from '@/components/Footer';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 
 export const metadata: Metadata = {
-  title: 'Bhiwandi Estate | Verified Flats, Heavy Deposit & Industrial Galas in Bhiwandi',
+  title: 'Taimur Real Estate | Verified Flats, Heavy Deposit & Industrial Galas in Bhiwandi',
   description:
-    'Search 1 BHK, 2 BHK, Heavy Deposit zero-rent apartments, low downpayment flats, and industrial galas/godowns across Dhamankar Naka, Anjur Phata, Temghar, and Purna Mankoli.',
+    'Taimur Real Estate: 10+ Years of Ground Trust. Verified 1 BHK, 2 BHK flats, Heavy Deposit zero-rent apartments, and industrial galas across Millat Nagar, Chavindra, VP Naka, Dhamankar Naka, and Bhiwandi.',
 };
 
 export default function RootLayout({

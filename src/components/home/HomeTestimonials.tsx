@@ -11,23 +11,23 @@ interface TestimonialItem {
 const testimonials: TestimonialItem[] = [
   {
     quote:
-      'Bhiwandi Estate helped us purchase a legally clean 2 BHK in Dhamankar Naka with zero hassle. Their loan team even got our SBI loan approved in just 6 days!',
+      'Taimur Bhai helped our family buy a legally clear 2 BHK flat in Millat Nagar. Unhone bina kisi jhoothe waade ke municipal papers khud check karwaye aur loan bhi fast sanction karwaya!',
     name: 'Sameer Qureshi',
-    role: 'Business Owner • Dhamankar Naka Buyer',
+    role: 'Homeowner • Millat Nagar 1',
     avatar: '/assets/images/user1.jpg',
   },
   {
     quote:
-      'Finding a zero-rent Heavy Deposit flat in Anjur Phata was so easy with Imran bhai. Everything was biometrically registered at the sub-registrar office with complete paperwork clarity.',
+      'Finding a zero-rent Heavy Deposit flat in Chavindra was completely stress-free with Taimur Real Estate. 100% legal biometric agreement karwaya with complete refundable security clarity.',
     name: 'Kavita & Mahesh Patil',
-    role: 'Heavy Deposit Tenant • Anjur Phata',
+    role: 'Heavy Deposit Tenant • Chavindra',
     avatar: '/assets/images/user2.jpg',
   },
   {
     quote:
-      'We leased a 4,500 sq.ft industrial gala in Purna for our logistics firm. Vikas Patil ensured 3-phase power sanction and full 40ft container trailer road clearance before signing.',
+      'Purchased a prime commercial shop near VP Naka through Taimur Bhai. Honest deal, no hidden fees or advance pressure, and transparent registration support from day one.',
     name: 'Farhan Ansari',
-    role: 'Director • Apex Logistics Purna',
+    role: 'Business Owner • VP Naka (Varala Devi)',
     avatar: '/assets/images/user3.jpg',
   },
 ];
@@ -39,19 +39,19 @@ export default function HomeTestimonials() {
         <div className="row justify-content-center">
           <div className="col-md-7 mb-5 text-center">
             <span
-              className="color-primary tagline pb-2 d-table m-auto text-uppercase"
-              style={{ letterSpacing: '1px' }}
+              className="badge px-3 py-2 text-uppercase mb-2 text-white"
+              style={{ backgroundColor: '#aa8453', letterSpacing: '1px' }}
             >
-              Client Trust &amp; Reviews
+              ★ 4.9 Rating (150+ Happy Clients)
             </span>
             <h3
-              className="color-dark mx-auto mb-2 text-center"
+              className="color-dark mx-auto mb-2 text-center fw-bold"
               style={{ fontFamily: 'Urbanist, sans-serif' }}
             >
-              What Families &amp; Business Owners Say
+              What Families &amp; Business Owners Say About Taimur Bhai
             </h3>
             <p className="text-secondary small mb-0">
-              Real experiences from verified buyers and tenants across Bhiwandi
+              Verified ground feedback from buyers and tenants across Millat Nagar, Chavindra, VP Naka &amp; Bhiwandi
             </p>
           </div>
         </div>

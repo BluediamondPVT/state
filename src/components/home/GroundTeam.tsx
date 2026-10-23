@@ -14,11 +14,11 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: 'Mohammad Tariq Ansari',
-    role: 'Founder & Principal Broker • MahaRERA Certified',
-    bio: '12+ years of on-ground real estate mastery across central Bhiwandi, Dhamankar Naka, and highway commercial hubs.',
+    name: 'Taimur Bhai',
+    role: 'Founder & Head Consultant • Taimur Real Estate',
+    bio: '10+ years of hyper-local trust across Millat Nagar, Dhamankar Naka, and Bhiwandi residential & commercial properties.',
     img: '/assets/images/team/1.jpg',
-    whatsappMsg: 'Hello Tariq bhai, I want to discuss property in Bhiwandi',
+    whatsappMsg: 'Hello Taimur bhai, I want to discuss property in Bhiwandi',
     btnText: 'Chat on WhatsApp',
   },
   {

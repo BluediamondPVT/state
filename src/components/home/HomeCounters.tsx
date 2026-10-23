@@ -2,36 +2,46 @@ import React from 'react';
 
 export default function HomeCounters() {
   return (
-    <div className="full-row">
+    <div className="full-row bg-light py-5">
       <div className="container">
-        <div className="row row-cols-lg-3 row-cols-1 g-4">
+        <div className="row row-cols-lg-4 row-cols-sm-2 row-cols-1 g-4 text-center text-sm-start">
           <div className="col">
-            <div className="d-flex flex-row text-uppercase counter-style-1">
-              <h1 className="color-primary counter-num mb-0">$15.4M</h1>
-              <span className="font-primary fw-bold counter-title">
-                Amount
-                <br />
-                Transactions
-              </span>
-            </div>
-          </div>
-          <div className="col">
-            <div className="d-flex flex-row text-uppercase counter-style-1">
-              <h1 className="color-primary counter-num mb-0">25K+</h1>
-              <span className="font-primary fw-bold counter-title">
+            <div className="d-flex flex-column flex-sm-row align-items-center gap-3 counter-style-1 p-3 bg-white rounded-3 shadow-sm h-100">
+              <h2 className="color-primary fw-bold mb-0" style={{ fontFamily: 'Urbanist, sans-serif' }}>₹200+ Cr</h2>
+              <span className="font-primary small fw-bold text-dark text-uppercase">
                 Properties
                 <br />
-                Sold Out
+                Transacted
               </span>
             </div>
           </div>
           <div className="col">
-            <div className="d-flex flex-row text-uppercase counter-style-1">
-              <h1 className="color-primary counter-num mb-0">1500</h1>
-              <span className="font-primary fw-bold counter-title">
-                Provided
+            <div className="d-flex flex-column flex-sm-row align-items-center gap-3 counter-style-1 p-3 bg-white rounded-3 shadow-sm h-100">
+              <h2 className="color-primary fw-bold mb-0" style={{ fontFamily: 'Urbanist, sans-serif' }}>1,500+</h2>
+              <span className="font-primary small fw-bold text-dark text-uppercase">
+                Satisfied
                 <br />
-                Positive Feedback
+                Families Shifted
+              </span>
+            </div>
+          </div>
+          <div className="col">
+            <div className="d-flex flex-column flex-sm-row align-items-center gap-3 counter-style-1 p-3 bg-white rounded-3 shadow-sm h-100">
+              <h2 className="color-primary fw-bold mb-0" style={{ fontFamily: 'Urbanist, sans-serif' }}>700+</h2>
+              <span className="font-primary small fw-bold text-dark text-uppercase">
+                Industrial Galas
+                <br />
+                &amp; Warehouses
+              </span>
+            </div>
+          </div>
+          <div className="col">
+            <div className="d-flex flex-column flex-sm-row align-items-center gap-3 counter-style-1 p-3 bg-white rounded-3 shadow-sm h-100">
+              <h2 className="color-primary fw-bold mb-0" style={{ fontFamily: 'Urbanist, sans-serif' }}>95%</h2>
+              <span className="font-primary small fw-bold text-dark text-uppercase">
+                Bank Loan
+                <br />
+                Approval Rate
               </span>
             </div>
           </div>

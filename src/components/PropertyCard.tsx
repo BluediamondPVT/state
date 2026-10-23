@@ -22,7 +22,7 @@ export default function PropertyCard({ property }: PropertyCardProps) {
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hi Bhiwandi Property Hub! I am interested in: "${property.title}" (${property.price}, ${property.locality}). Please share video walkthrough & exact address details.`
+    `Hello Taimur Bhai (Taimur Real Estate)! I am interested in: "${property.title}" (${property.price}, ${property.locality}). Please share video walkthrough & address details.`
   );
   const whatsappUrl = `https://wa.me/${AGENCY_CONFIG.whatsapp}?text=${whatsappMessage}`;
 

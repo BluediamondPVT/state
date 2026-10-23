@@ -9,12 +9,16 @@ interface FaqItem {
 
 const faqs: FaqItem[] = [
   {
-    q: 'Can I get up to 90% home loan for flats in Bhiwandi?',
-    a: 'Yes! We have tie-ups with SBI, HDFC, ICICI, Bank of Baroda, and major nationalized banks. Our dedicated finance desk assists both salaried and business owners with up to 85%-90% loan sanctions along with PMAY subsidy benefits.',
+    q: 'Property pasand aane par booking ka kya process hai? Kya pehle advance dena hota hai?',
+    a: 'Pehle property dekhne ya consultation ka koi advance nahi dena hota — site visits 100% FREE hain! Lekin jaise hi aapko koi flat, room ya gala pasand aa jata hai (chahe wo Sale flat ho, Heavy Deposit zero-rent ho, ya Monthly Rent ho), property ko owner ke sath lock/hold karne ke liye nominal Booking Token amount dena hota hai with official receipt. Iske baad Taimur Real Estate legal papers check karwa ke registered agreement aur loan process complete karwata hai.',
   },
   {
     q: 'What is a Heavy Deposit flat agreement and how does it work?',
     a: 'In a Heavy Deposit agreement, you pay a one-time refundable deposit (e.g. ₹2.5 Lakhs to ₹6 Lakhs depending on 1BHK/2BHK) with ₹0 monthly rent. At the end of the registered tenure, 100% of your deposit amount is refunded back to you by the owner.',
+  },
+  {
+    q: 'Can I get up to 90% home loan for flats in Bhiwandi?',
+    a: 'Yes! We have tie-ups with SBI, HDFC, ICICI, Bank of Baroda, and major nationalized banks. Our dedicated finance desk assists both salaried and business owners with up to 85%-90% loan sanctions along with complete documentation support.',
   },
   {
     q: 'Why are exact flat numbers and wings kept confidential online?',

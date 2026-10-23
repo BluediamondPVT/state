@@ -5,7 +5,7 @@ import { AGENCY_CONFIG } from '@/data/properties';
 
 export default function FloatingWhatsApp() {
   const message = encodeURIComponent(
-    'Hello Bhiwandi Property Hub! I am looking for property in Bhiwandi. Please share available flat / gala options.'
+    'Hello Taimur Bhai (Taimur Real Estate)! I am looking for property in Bhiwandi. Please share available flat / gala options.'
   );
   const whatsappUrl = `https://wa.me/${AGENCY_CONFIG.whatsapp}?text=${message}`;
 

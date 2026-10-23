@@ -24,7 +24,7 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const property = PROPERTIES.find((p) => p.slug === slug);
-  if (!property) return { title: 'Property Not Found | Bhiwandi Property Hub' };
+  if (!property) return { title: 'Property Not Found | Taimur Real Estate' };
 
   return {
     title: `${property.title} in ${property.locality}, Bhiwandi | ₹${property.price}`,

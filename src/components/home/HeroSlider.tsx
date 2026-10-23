@@ -21,41 +21,42 @@ export default function HeroSlider() {
         >
           <p
             style={{
-              fontSize: '15px',
+              fontSize: '14px',
               textTransform: 'uppercase',
-              letterSpacing: '5px',
-              fontWeight: 500,
-              fontFamily: "'Urbanist', sans-serif",
-            }}
-            className="text-white mb-2"
-          >
-            All In One
-          </p>
-          <h1
-            style={{
-              fontSize: '40px',
               letterSpacing: '3px',
               fontWeight: 600,
               fontFamily: "'Urbanist', sans-serif",
+              color: '#d4af37',
+            }}
+            className="mb-2"
+          >
+            10+ YEARS OF GROUND TRUST • MILLAT NAGAR &amp; ALL BHIWANDI
+          </p>
+          <h1
+            style={{
+              fontSize: '44px',
+              letterSpacing: '1px',
+              fontWeight: 700,
+              fontFamily: "'Urbanist', sans-serif",
+              lineHeight: '1.25',
             }}
             className="text-white mb-3"
           >
-            Property Listing Template
+            Taimur Real Estate
           </h1>
           <p
             style={{
               fontFamily: "'Urbanist', sans-serif",
               fontWeight: 400,
-              letterSpacing: '2px',
-              maxWidth: '650px',
+              letterSpacing: '1px',
+              maxWidth: '750px',
               fontSize: '18px',
-              color: '#ffffff',
-              lineHeight: '30px',
+              color: '#f1f5f9',
+              lineHeight: '28px',
               margin: '0 auto',
             }}
           >
-            Looking for your dream house or property. Search here and select
-            your best one from more than 1 million listing.
+            Verified 1 &amp; 2 BHK Flats, Zero-Rent Heavy Deposit Agreements, and Industrial Galas in Millat Nagar, Chavindra, VP Naka &amp; Greater Bhiwandi.
           </p>
         </div>
       </div>

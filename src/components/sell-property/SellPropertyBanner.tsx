@@ -18,7 +18,7 @@ export default function SellPropertyBanner() {
           Zero Brokerage for Verified Landlords
         </span>
         <h1 className="display-5 fw-bold mb-3" style={{ fontFamily: 'Urbanist, sans-serif' }}>
-          List Your Flat, Shop or Gala with Bhiwandi’s #1 Agent
+          List Your Flat, Shop or Gala with Taimur Real Estate
         </h1>
         <p className="lead text-white-50 mx-auto" style={{ maxWidth: '650px' }}>
           We have ready, pre-approved buyers from Mumbai, Thane, Kalyan, and Pune looking for

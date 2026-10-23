@@ -63,7 +63,7 @@ export default function FaqCategoryFilter({ activeCategory, setActiveCategory }:
           Our senior advisors respond directly on WhatsApp within 5 minutes.
         </p>
         <a
-          href={`https://wa.me/${AGENCY_CONFIG.whatsapp}?text=Hello%20Bhiwandi%20Estate%20team,%20I%20have%20a%20question`}
+          href={`https://wa.me/${AGENCY_CONFIG.whatsapp}?text=Hello%20Taimur%20Real%20Estate%20team,%20I%20have%20a%20question`}
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn-sm btn-light w-100 fw-bold"

@@ -43,8 +43,18 @@ const faqs: FaqData[] = [
   },
   {
     category: 'privacy',
-    q: 'Do you provide site visits on weekends or holidays?',
-    a: 'Yes! Our field executives are on the ground 7 days a week from 9:30 AM to 7:30 PM. We recommend calling or messaging on WhatsApp a day prior to ensure private owner coordination.',
+    q: 'Do I need to pay any advance to see properties? What is the booking token process?',
+    a: 'Site visits and consultations are 100% FREE — zero advance fees! However, once you like a property (whether it is a Flat for Sale, Heavy Deposit zero-rent flat, Low Deposit flat, or Commercial Gala), a nominal Booking Token amount is paid with an official written receipt to lock/hold the property with the owner so it is reserved exclusively for you. Following the token, Taimur Real Estate carries out complete document checks, prepares the registered agreement, and coordinates bank loan sanctions.',
+  },
+  {
+    category: 'documentation',
+    q: 'Which specific localities in Bhiwandi does Taimur Real Estate cover?',
+    a: 'Our main office is located at Millat Nagar 1. While we are the most trusted local authority in Millat Nagar, Chavindra, and VP Naka (Varala Devi), our on-ground team covers all major residential & commercial zones of Bhiwandi, including Dhamankar Naka, Anjur Phata, Temghar, Narpoli, Mankoli, and the Purna-Kasheli logistics warehouse belt.',
+  },
+  {
+    category: 'privacy',
+    q: 'Do you provide site visits on weekends or late evenings?',
+    a: 'Yes! Our office is open 7 days a week from 10:00 AM to 11:00 PM. We accommodate site visits according to your family convenience, including late evenings and Sundays. Simply drop a message on WhatsApp (+91 98222 70773) to book your slot.',
   },
 ];
 

@@ -28,12 +28,12 @@ export default function Footer() {
                   <i className="fa-solid fa-building"></i>
                 </div>
                 <span className="fw-bold text-white fs-5" style={{ fontFamily: 'Urbanist, sans-serif' }}>
-                  BHIWANDI <span style={{ color: '#aa8453' }}>ESTATE</span>
+                  TAIMUR <span style={{ color: '#aa8453' }}>REAL ESTATE</span>
                 </span>
               </div>
 
               <p className="small mb-3 text-white-50" style={{ lineHeight: '1.7' }}>
-                Bhiwandi’s top verified property portal specializing in residential flats, heavy deposit zero-rent apartments, and industrial logistics galas across Thane-Bhiwandi corridors.
+                Bhiwandi’s trusted property advisory specializing in Millat Nagar, Chavindra, VP Naka, and greater Bhiwandi. Residential flats, zero-rent heavy deposit agreements, and industrial logistics galas.
               </p>
 
               <div className="p-3 rounded-2 mb-3" style={{ backgroundColor: '#28283a', border: '1px solid #333348' }}>
@@ -66,12 +66,12 @@ export default function Footer() {
                 Top Localities
               </h6>
               <ul className="list-unstyled d-flex flex-column gap-2 small">
-                <li><Link href="/properties?locality=Anjur+Phata" className="text-secondary text-decoration-none hover-white">Anjur Phata Highway</Link></li>
+                <li><Link href="/properties?locality=Millat+Nagar" className="text-secondary text-decoration-none hover-white">Millat Nagar 1 &amp; 2</Link></li>
+                <li><Link href="/properties?locality=Chavindra" className="text-secondary text-decoration-none hover-white">Chavindra Sector</Link></li>
+                <li><Link href="/properties?locality=VP+Naka" className="text-secondary text-decoration-none hover-white">VP Naka (Varala Devi)</Link></li>
                 <li><Link href="/properties?locality=Dhamankar+Naka" className="text-secondary text-decoration-none hover-white">Dhamankar Naka</Link></li>
-                <li><Link href="/properties?locality=Temghar" className="text-secondary text-decoration-none hover-white">Temghar Gated Towers</Link></li>
-                <li><Link href="/properties?locality=Mankoli" className="text-secondary text-decoration-none hover-white">Mankoli Bypass</Link></li>
-                <li><Link href="/properties?locality=Narpoli" className="text-secondary text-decoration-none hover-white">Narpoli Market</Link></li>
-                <li><Link href="/properties?locality=Purna+%26+Kasheli" className="text-secondary text-decoration-none hover-white">Purna & Kasheli Warehouses</Link></li>
+                <li><Link href="/properties?locality=Anjur+Phata" className="text-secondary text-decoration-none hover-white">Anjur Phata Highway</Link></li>
+                <li><Link href="/properties?locality=Purna+%26+Kasheli" className="text-secondary text-decoration-none hover-white">Purna &amp; Kasheli Warehouses</Link></li>
               </ul>
             </div>
 

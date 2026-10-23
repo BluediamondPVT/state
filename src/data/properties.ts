@@ -2,28 +2,52 @@ import { Property, LocalityInfo } from '@/types/property';
 
 export const LOCALITIES: LocalityInfo[] = [
   {
-    id: 'anjur-phata',
-    name: 'Anjur Phata',
-    slug: 'anjur-phata',
+    id: 'millat-nagar',
+    name: 'Millat Nagar 1 & 2',
+    slug: 'millat-nagar',
     image: '/assets/images/location/1.png',
-    propertyCount: 28,
-    tagline: 'Best connected to Thane & Kalyan bypass with modern residential complexes.'
+    propertyCount: 38,
+    tagline: 'Taimur Real Estate headquarter hub, prime family residential apartments & market connectivity.'
+  },
+  {
+    id: 'chavindra',
+    name: 'Chavindra',
+    slug: 'chavindra',
+    image: '/assets/images/location/2.png',
+    propertyCount: 29,
+    tagline: 'Rapidly growing residential sector with spacious budget homes and peaceful living.'
+  },
+  {
+    id: 'vp-naka',
+    name: 'VP Naka (Varala Devi)',
+    slug: 'vp-naka',
+    image: '/assets/images/location/3.png',
+    propertyCount: 25,
+    tagline: 'High-demand central junction with top commercial shops, clinics & swift transport.'
   },
   {
     id: 'dhamankar-naka',
     name: 'Dhamankar Naka',
     slug: 'dhamankar-naka',
-    image: '/assets/images/location/2.png',
+    image: '/assets/images/location/4.png',
     propertyCount: 34,
     tagline: 'Central heart of Bhiwandi with top markets, schools & bus stations.'
   },
   {
-    id: 'temghar',
-    name: 'Temghar',
-    slug: 'temghar',
-    image: '/assets/images/location/3.png',
-    propertyCount: 22,
-    tagline: 'Rapidly developing residential hub with clean lifestyle & gated towers.'
+    id: 'anjur-phata',
+    name: 'Anjur Phata',
+    slug: 'anjur-phata',
+    image: '/assets/images/location/5.png',
+    propertyCount: 28,
+    tagline: 'Best connected to Thane & Kalyan bypass with modern residential complexes.'
+  },
+  {
+    id: 'purna-kasheli',
+    name: 'Purna & Kasheli',
+    slug: 'purna-kasheli',
+    image: '/assets/images/location/6.png',
+    propertyCount: 42,
+    tagline: 'Asia’s premier logistics & industrial godown hub right next to Thane.'
   },
   {
     id: 'mankoli',
@@ -34,20 +58,12 @@ export const LOCALITIES: LocalityInfo[] = [
     tagline: 'Prime highway entry point, luxury township projects & commercial parks.'
   },
   {
-    id: 'narpoli',
-    name: 'Narpoli',
-    slug: 'narpoli',
-    image: '/assets/images/location/5.png',
-    propertyCount: 16,
-    tagline: 'Budget-friendly 1BHK, 1RK flats & prime business shops.'
-  },
-  {
-    id: 'purna-kasheli',
-    name: 'Purna & Kasheli',
-    slug: 'purna-kasheli',
-    image: '/assets/images/location/6.png',
-    propertyCount: 42,
-    tagline: 'Asia’s premier logistics & industrial godown hub right next to Thane.'
+    id: 'temghar',
+    name: 'Temghar',
+    slug: 'temghar',
+    image: '/assets/images/location/3.png',
+    propertyCount: 22,
+    tagline: 'Rapidly developing residential hub with clean lifestyle & gated towers.'
   }
 ];
 
@@ -307,14 +323,28 @@ export const PROPERTIES: Property[] = [
 ];
 
 export const AGENCY_CONFIG = {
-  name: 'Bhiwandi Property Hub',
-  tagline: 'Bhiwandi’s #1 Most Trusted Real Estate Consultant',
-  phone: '+91 98765 43210',
-  phoneDisplay: '+91 98765 43210',
-  whatsapp: '919876543210',
-  email: 'contact@bhiwandipropertyhub.com',
-  officeAddress: 'Shop 14, Commercial Complex, Near Dhamankar Naka Flyover, Bhiwandi, Maharashtra 421302',
-  operatingHours: 'Mon - Sun: 9:30 AM to 8:30 PM',
-  experienceYears: '12+ Years in Bhiwandi',
-  reraNumber: 'A51700028914'
+  name: 'Taimur Real Estate',
+  tagline: 'Bhiwandi’s #1 Trusted Local Real Estate & Heavy Deposit Consultant',
+  phone: '+91 98222 70773',
+  phoneDisplay: '+91 98222 70773',
+  whatsapp: '919822270773',
+  email: 'info@taimurrealstate.com',
+  officeAddress: 'Millat Nagar 1, Bhiwandi, Thane, Maharashtra 421302',
+  operatingHours: 'Mon - Sun: 10:00 AM to 11:00 PM',
+  experienceYears: '10+ Years in Bhiwandi',
+  reraNumber: 'RERA Applied (In Process)',
+  googleMapsUrl: 'https://maps.google.com/?q=Millat+Nagar+1+Bhiwandi+Thane',
+  stats: {
+    familiesShifted: '1,500+ Families',
+    galasLeased: '700+ Units',
+    propertyWorthSold: '₹200+ Crores',
+    loanSuccessRate: '95% Approval'
+  },
+  specializations: [
+    'Residential Flats (1 BHK, 2 BHK, 3 BHK)',
+    'Heavy Deposit (Zero Monthly Rent)',
+    'Industrial Galas & Logistics Warehouses (Purna, Mankoli, Rahnal)',
+    'Commercial Shops & Offices',
+    'Open Land & NA Plots'
+  ]
 };

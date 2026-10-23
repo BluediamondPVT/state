@@ -27,6 +27,11 @@ export default function ComparisonTable() {
       traditional: 'Limited options, mostly basic sales',
       bhiwandiEstate: '1BHK/2BHK, Heavy Deposit (Zero Rent), & Industrial Galas',
     },
+    {
+      feature: 'Advance & Booking Process',
+      traditional: 'Demanding advance fee for visits or unrecorded verbal tokens',
+      bhiwandiEstate: '100% Free Visits • Official Booking Token with Receipt Only Once You Like the Property',
+    },
   ];
 
   return (
@@ -43,11 +48,10 @@ export default function ComparisonTable() {
             className="display-6 fw-bold text-dark mt-1"
             style={{ fontFamily: 'Urbanist, sans-serif' }}
           >
-            Traditional Brokers vs Bhiwandi Estate
+            Conventional Brokers vs Taimur Real Estate
           </h2>
           <p className="text-secondary mx-auto" style={{ maxWidth: '650px' }}>
-            See why buyers and sellers experience faster, safer, and legally sound transactions with
-            us.
+            See why families, shop owners, and warehouse investors across Bhiwandi trust Taimur Real Estate for faster, safer transactions.
           </p>
         </div>
 
@@ -67,7 +71,7 @@ export default function ComparisonTable() {
                     className="p-4 fw-bold"
                     style={{ width: '35%', color: '#aa8453' }}
                   >
-                    Bhiwandi Estate Standard ★
+                    Taimur Real Estate Standard ★
                   </th>
                 </tr>
               </thead>

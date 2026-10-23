@@ -12,19 +12,19 @@ export default function WhyChooseUsPillars() {
     {
       icon: 'fa-city',
       badge: 'Local Authority',
-      title: '12+ Years Hyper-Local Ground Expertise',
-      desc: 'From high-rise residential towers in Dhamankar Naka and Anjur Phata to massive industrial logistics hubs in Purna and Mankoli, our on-ground intelligence ensures you always get the best market value.',
+      title: '10+ Years Hyper-Local Ground Expertise',
+      desc: 'From our residential roots in Millat Nagar, Chavindra, and VP Naka to Dhamankar Naka and massive industrial logistics hubs in Purna and Mankoli, our on-ground intelligence ensures you always get the best market value.',
     },
     {
       icon: 'fa-hand-holding-dollar',
       badge: 'Finance Desk',
       title: 'Up to 90% Bank Loan Sanctions Guaranteed',
-      desc: 'Our dedicated banking liaisons work directly with SBI, HDFC, ICICI, Bank of Baroda, and major nationalized banks to ensure fast approvals, lowest interest rates, and complete PMAY subsidy assistance.',
+      desc: 'Our dedicated banking liaisons work directly with SBI, HDFC, ICICI, Bank of Baroda, and major nationalized banks to ensure fast approvals, lowest interest rates, and complete documentation assistance.',
     },
     {
       icon: 'fa-file-signature',
       badge: 'Legal Scrutiny',
-      title: `MahaRERA Registered (${AGENCY_CONFIG.reraNumber})`,
+      title: `RERA Compliance & Title Verification`,
       desc: 'Zero legal ambiguity. Every project, flat, and gala in our directory undergoes strict title deed searches, municipal CC/OC checks, and Grampanchayat approval audits before listing.',
     },
   ];

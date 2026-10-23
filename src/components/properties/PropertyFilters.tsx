@@ -1,5 +1,5 @@
 import React from 'react';
-import { LOCALITIES } from '@/data/properties';
+import { LOCALITIES, AGENCY_CONFIG } from '@/data/properties';
 
 interface Props {
   selectedType: string;
@@ -112,7 +112,7 @@ export default function PropertyFilters({
           We have 50+ private offline listings in Bhiwandi.
         </p>
         <a
-          href="https://wa.me/919876543210?text=Hi%2C%20I%20have%20a%20specific%20property%20requirement%20in%20Bhiwandi."
+          href={`https://wa.me/${AGENCY_CONFIG.whatsapp}?text=${encodeURIComponent('Hello Taimur Bhai, I have a specific property requirement in Bhiwandi.')}`}
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn-sm w-100 fw-bold text-white"

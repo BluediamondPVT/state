@@ -20,15 +20,15 @@ export default function AboutStory() {
             Redefining Real Estate Brokerage in the Heart of Bhiwandi
           </h2>
           <p className="text-secondary" style={{ lineHeight: '1.8' }}>
-            Established over a decade ago, <strong>{AGENCY_CONFIG.name}</strong> was founded on a
-            simple principle: to make buying, selling, and renting properties in Bhiwandi as secure,
-            transparent, and hassle-free as possible.
+            Established 10 years ago in <strong>Millat Nagar</strong>, <strong>{AGENCY_CONFIG.name}</strong> was founded on a
+            solid principle: to make buying, selling, and heavy deposit deals in Bhiwandi as secure,
+            transparent, and hassle-free as possible. From our grassroots in Millat Nagar, Chavindra, and VP Naka, we have grown to serve clients across all of Bhiwandi, Thane bypass, and the Mankoli-Purna industrial corridor.
           </p>
           <p className="text-secondary" style={{ lineHeight: '1.8' }}>
-            While traditional brokerages rely on vague promises and hidden details, we implement
-            our signature <strong>80% Confidentiality &amp; Direct Advisory Model</strong>. We
-            verify municipal records, OC/CC statuses, and grampanchayat approvals before any
-            property is ever presented to a prospective buyer.
+            While traditional brokers rely on unverified claims and hidden terms, we implement
+            our signature <strong>80% Confidentiality &amp; Direct Advisory Model</strong>. We physically inspect properties,
+            scrutinize municipal records, OC/CC statuses, and grampanchayat approvals before any
+            property is ever recommended to a family or investor.
           </p>
           <div className="p-3 bg-light rounded-3 border-start border-4 border-warning mt-4">
             <p className="small mb-0 text-dark">

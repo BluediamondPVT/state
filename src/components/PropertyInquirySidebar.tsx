@@ -14,7 +14,7 @@ export default function PropertyInquirySidebar({ property }: Props) {
   const [phone, setPhone] = useState('');
 
   const whatsappInquiry = encodeURIComponent(
-    `Hello Bhiwandi Property Hub! I want to visit/know more about "${property.title}" listed for ${property.price} in ${property.locality}. Please schedule a site visit.`
+    `Hello Taimur Bhai (Taimur Real Estate)! I want to visit/know more about "${property.title}" listed for ${property.price} in ${property.locality}. Please schedule a site visit.`
   );
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -68,6 +68,12 @@ export default function PropertyInquirySidebar({ property }: Props) {
         <i className="fa-solid fa-phone"></i>
         <span>Call Agent ({AGENCY_CONFIG.phoneDisplay})</span>
       </a>
+
+      <div className="p-2 rounded-2 mb-3 text-center" style={{ backgroundColor: '#f0fdf4', border: '1px solid #bbf7d0' }}>
+        <small className="text-success fw-semibold" style={{ fontSize: '11.5px' }}>
+          <i className="fa-solid fa-check-circle me-1"></i> 100% Free Site Visits • Nominal Token Only When You Like The Property
+        </small>
+      </div>
 
       <hr className="my-3" />
 

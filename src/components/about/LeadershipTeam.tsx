@@ -11,9 +11,9 @@ interface Member {
 
 const leaders: Member[] = [
   {
-    name: 'Mohammad Tariq Ansari',
-    role: 'Founder & Principal Broker',
-    bio: '12+ years of hyper-local real estate authority across Dhamankar Naka, Anjur Phata, and the MMR highway belt.',
+    name: 'Taimur Bhai',
+    role: 'Founder & Principal Consultant',
+    bio: '10+ years of hyper-local real estate authority across Millat Nagar, Dhamankar Naka, Anjur Phata, and greater Bhiwandi.',
     image: '/assets/images/team/1.jpg',
   },
   {

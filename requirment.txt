@@ -1,0 +1,104 @@
+ Core Business & Contact Details (Header, Footer & WhatsApp)
+Ye information poori website ke Header, Footer, Contact Page aur Floating WhatsApp buttons me use hogi.
+
+Field	Description / Requirement	Example / Client Answer
+Agency Legal Name	Agency ka official / board name	e.g., Bhiwandi Property Hub / Ansari Real Estate
+Agency Tagline / Slogan	1-line catchy brand slogan	e.g., Bhiwandi's #1 Trusted Property & Heavy Deposit Experts
+Primary WhatsApp Number	Leads & site visit direct route hone ke liye	e.g., +91 98XXX XXXXX (WhatsApp Active)
+Calling Phone Number	Office calling / mobile number	e.g., +91 98XXX XXXXX
+Official Email Address	Inquiries aur documentation ke liye	e.g., 
+
+info@agencyname.com
+Complete Office Address	Physical office address landmark ke sath	e.g., Shop No. 12, ABC Plaza, Near Dhamankar Naka Flyover, Bhiwandi - 421302
+Office Timings	Kaam ke din aur ghante	e.g., Mon - Sun: 9:30 AM to 8:30 PM (Weekly Off agar koi ho)
+MahaRERA Registration No.	MahaRERA Individual ya Firm Broker ID	e.g., A517000XXXXX (Agar registered ho toh trust 10x badhta hai)
+Google Maps Location Link	Office ka direct location map link	URL Link
+2️⃣ About Agency & History (/about & Home About)
+Client ka background aur market credibility show karne ke liye:
+
+ Experience (Years): Kitne saal se Bhiwandi market me kaam kar rahe hain? (e.g., 10+ Years / 15+ Years)
+ Founder / Agency Story: Business kab aur kaise start hua? Client ka main vision kya hai? (Short 4-5 lines)
+ Core Specialization: Agency kis type ke deals me best hai?
+Residential Flats (1 BHK, 2 BHK, 3 BHK)
+Heavy Deposit (Zero Monthly Rent)
+Industrial Galas & Logistics Warehouses (Purna, Mankoli, Rahnal)
+Commercial Shops & Offices
+Open Land / NA Plots
+ Key Achievement Numbers (Stats Counter):
+Total Satisfied Families Shifted: (e.g., 1200+ Families)
+Commercial / Industrial Units Leased: (e.g., 350+ Galas)
+Total Worth Properties Sold: (e.g., ₹85+ Crores)
+Bank Loan Success Rate: (e.g., 95% Approval)
+3️⃣ Leadership & Team Members (/about & Team Section)
+Website pe real team dikhane se customers ka trust exponentially badh jata hai:
+
+Person 1: Founder / Principal Broker
+Full Name:
+Designation / Role: (e.g., Founder & MahaRERA Certified Real Estate Consultant)
+Short Bio: (1-2 lines on their experience in Bhiwandi)
+WhatsApp / Phone:
+High-Quality Photo: (Square or portrait format)
+Person 2: Residential & Heavy Deposit Lead
+Full Name:
+Designation / Role: (e.g., Head of Residential Deals & Heavy Deposit Tenancy)
+Short Bio:
+Photo:
+Person 3: Banking & Home Loan Advisor
+Full Name:
+Designation / Role: (e.g., Senior Home Loan & Financial Liaison)
+Short Bio: (e.g., Direct tie-up with SBI, HDFC, ICICI for up to 90% loan)
+Photo:
+Person 4: Commercial & Industrial Specialist
+Full Name:
+Designation / Role: (e.g., Industrial Gala & Warehousing Consultant - Mankoli & Purna)
+Short Bio:
+Photo:
+4️⃣ Why Choose Us & Brokerage Terms (/why-choose-us)
+ 80% Privacy Model: Kya client exact flat number/building wing private rakhta hai jab tak buyer verified na ho?
+ Legal Document Verification: Client kya-kya document verify karta hai? (Title deed, 7/12 extract, OC/CC, Gram Panchayat vs BNMC approval)
+ Brokerage & Fees Structure:
+Resale Purchase: (e.g., 1% or 2% standard)
+Rental / Heavy Deposit: (e.g., 1 month rent or nominal fee)
+New Builder Projects: (e.g., Zero Brokerage direct from builder)
+ Home Loan Assistance: Kon-kon se banks se tie-up hai? (SBI, HDFC, Axis, Bank of Baroda, PNB Housing, etc.)
+5️⃣ Top Operating Localities (Focus Areas)
+Client se confirm karein ki wo kin-kin areas me sabse zyada properties deal karte hain:
+
+ Dhamankar Naka (Central heart, markets & schools)
+ Anjur Phata (Thane & Highway connectivity)
+ Temghar (Gated high-rise complexes)
+ Mankoli / Pipeline Road (Highway entry & townships)
+ Purna / Kasheli / Rahnal (Industrial galas & godowns)
+ Narpoli (Affordable budget homes & shops)
+ Kalyan Road / Khadipar / Nizampura
+6️⃣ Real Property Listings Data (Initial 6–10 Properties)
+Har property ke liye ye simple format client se fill karwayein:
+
+markdown
+Property #1 Details:
+- Title: (e.g., "Ready 2 BHK Flat with Balcony in Prime Gated Complex")
+- Locality: (e.g., Dhamankar Naka / Anjur Phata)
+- Deal Type: [ ] For Sale   [ ] Heavy Deposit   [ ] For Rent   [ ] Industrial Lease
+- Price / Deposit: (e.g., ₹34.50 Lakhs / ₹4 Lakhs Deposit)
+- Price Negotiation: (e.g., Fixed / Negotiable / Loan Available)
+- Configuration: (e.g., 1 RK / 1 BHK / 2 BHK / Gala)
+- Carpet Area: (e.g., 650 Sq.Ft)
+- Floor: (e.g., 4th of 12 Floors, Lift available)
+- Water Supply: (e.g., 24 Hours Municipal Water + Overhead Storage)
+- Furnishing: (Unfurnished / Semi-Furnished / Fully-Furnished)
+- Bank Loan: [ ] Approved (Up to 90%)   [ ] Cash/Direct Deal
+- Key Amenities: (e.g., Lift, Security CCTV, Balcony, Reserved Parking)
+- Real Photos: (Min 2–4 clear photos of hall, kitchen, bedroom, building)
+7️⃣ Frequently Asked Questions (FAQ) Data (/faq)
+Bhiwandi ke buyers ke real doubts client se verify karein:
+
+Heavy Deposit Deal: "Heavy deposit me monthly rent zero hota hai toh paise kab aur kaise wapas milte hain?"
+Paper Verification: "Bhiwandi me Gram Panchayat vs Municipal Corporation (BNMC) paper verification kaise hota hai?"
+Loan for Low Salary / Private Jobs: "Agar salary cash me milti ho ya private job ho toh loan mil sakta hai kya?"
+Site Visit Schedule: "Property dekhne ke liye direct site visit kaise arrange hoti hai?"
+8️⃣ Real Customer Testimonials (3 to 5 Reviews)
+Client se unke satisfied buyers/tenants ke short reviews:
+
+Review 1: Name, Locality, Property bought/rented, Short 2 lines comment.
+Review 2: Name, Locality, Property bought/rented, Short 2 lines comment.
+Review 3: Name, Locality, Property bought/rented, Short 2 lines comment.

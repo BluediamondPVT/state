@@ -77,7 +77,7 @@ export default function BlogSidebar() {
           Have an inquiry about a flat or commercial gala? Talk directly with our ground advisors.
         </p>
         <a
-          href={`https://wa.me/${AGENCY_CONFIG.whatsapp}?text=Hello%20Bhiwandi%20Estate,%20I%20have%20an%20inquiry%20regarding%20Bhiwandi%20properties`}
+          href={`https://wa.me/${AGENCY_CONFIG.whatsapp}?text=Hello%20Taimur%20Real%20Estate,%20I%20have%20an%20inquiry%20regarding%20Bhiwandi%20properties`}
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn-sm btn-primary w-100 fw-bold"
