@@ -13,10 +13,48 @@ import HomeFaq from '@/components/home/HomeFaq';
 import HomeBlogSection from '@/components/home/HomeBlogSection';
 import SubscribeBanner from '@/components/home/SubscribeBanner';
 
-export const metadata = {
-  title: 'Bhiwandi Estate | Verified Flats, Heavy Deposit & Industrial Galas in Bhiwandi',
+import type { Metadata } from 'next';
+import { SITE_URL } from '@/lib/seo';
+
+export const metadata: Metadata = {
+  title: 'Taimur Real Estate | Verified Flats, Heavy Deposit & Industrial Galas in Bhiwandi',
   description:
-    'Search 1 BHK, 2 BHK, Heavy Deposit zero-rent apartments, low downpayment flats, and industrial galas/godowns across Dhamankar Naka, Anjur Phata, Temghar, and Purna Mankoli.',
+    'Search verified 1 BHK, 2 BHK, Heavy Deposit zero-rent apartments, low downpayment flats, and industrial galas/godowns across Dhamankar Naka, Anjur Phata, Millat Nagar, and Temghar.',
+  keywords: [
+    'Bhiwandi real estate',
+    'Flats in Bhiwandi',
+    'Heavy deposit flat in Bhiwandi',
+    '1 BHK in Bhiwandi',
+    '2 BHK in Bhiwandi',
+    'Dhamankar Naka flats',
+    'Anjur Phata flats',
+    'Industrial galas in Bhiwandi',
+    'Taimur Real Estate',
+  ],
+  alternates: {
+    canonical: SITE_URL,
+  },
+  openGraph: {
+    title: 'Taimur Real Estate | #1 Property Agency in Bhiwandi',
+    description:
+      'Verified 1 BHK, 2 BHK, Heavy Deposit apartments & commercial galas in Bhiwandi. 10+ Years of Ground Trust.',
+    url: SITE_URL,
+    type: 'website',
+    images: [
+      {
+        url: '/assets/images/banner/hero1.png',
+        width: 1200,
+        height: 630,
+        alt: 'Taimur Real Estate Bhiwandi Portal',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Taimur Real Estate | #1 Property Agency in Bhiwandi',
+    description: 'Verified 1 BHK, 2 BHK, Heavy Deposit & Industrial Galas in Bhiwandi.',
+    images: ['/assets/images/banner/hero1.png'],
+  },
 };
 
 export default function HomePage() {

@@ -1,11 +1,28 @@
-import React from 'react';
+import type { Metadata } from 'next';
 import SellPropertyBanner from '@/components/sell-property/SellPropertyBanner';
 import SellPropertyForm from '@/components/sell-property/SellPropertyForm';
+import { SITE_URL } from '@/lib/seo';
 
-export const metadata = {
-  title: 'List Property | Bhiwandi Estate - Zero Brokerage for Landlords',
+export const metadata: Metadata = {
+  title: 'List Your Property | Taimur Real Estate - Direct Buyers & Zero Hassle',
   description:
-    'List your flat, industrial gala, or shop in Bhiwandi with direct buyer access, 80% privacy protection, and zero broker hassle.',
+    'List your 1 BHK, 2 BHK flat, shop, or industrial gala in Bhiwandi with Taimur Real Estate. 80% privacy protection, pre-qualified buyers, and zero upfront fee.',
+  alternates: {
+    canonical: `${SITE_URL}/sell-property`,
+  },
+  openGraph: {
+    title: 'List Your Property in Bhiwandi | Taimur Real Estate',
+    description: 'Direct access to genuine buyers & tenants in Millat Nagar, Dhamankar Naka, and Bhiwandi.',
+    url: `${SITE_URL}/sell-property`,
+    type: 'website',
+    images: ['/assets/images/banner/hero1.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'List Your Property in Bhiwandi with Taimur Real Estate',
+    description: 'Get verified buyers for your flat or commercial property.',
+    images: ['/assets/images/banner/hero1.png'],
+  },
 };
 
 export default function SellPropertyPage() {

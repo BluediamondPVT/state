@@ -1,8 +1,16 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { AGENCY_CONFIG } from '@/data/properties';
 
 export default function Footer() {
+  const pathname = usePathname();
+  if (pathname?.startsWith('/admin') || pathname === '/login') {
+    return null;
+  }
+
   return (
     <footer style={{ backgroundColor: '#1d1d2b', color: '#a0a0b2', fontSize: '14px' }}>
       {/* Main Footer */}

@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import FaqBanner from '@/components/faq/FaqBanner';
 import FaqCategoryFilter from '@/components/faq/FaqCategoryFilter';
 import FaqAccordionList, { FaqData } from '@/components/faq/FaqAccordionList';
+import JsonLd from '@/components/seo/JsonLd';
 
 const faqs: FaqData[] = [
   {
@@ -67,8 +68,24 @@ export default function FaqPage() {
       ? faqs
       : faqs.filter((item) => item.category === activeCategory);
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: f.a,
+      },
+    })),
+  };
+
   return (
     <main className="bg-light">
+      {/* Schema.org FAQPage Structured Data */}
+      <JsonLd data={faqSchema} />
+
       {/* 1. Header Banner */}
       <FaqBanner />
 

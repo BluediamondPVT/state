@@ -1,9 +1,15 @@
 'use client';
 
 import React from 'react';
+import { usePathname } from 'next/navigation';
 import { AGENCY_CONFIG } from '@/data/properties';
 
 export default function FloatingWhatsApp() {
+  const pathname = usePathname();
+  if (pathname?.startsWith('/admin') || pathname === '/login') {
+    return null;
+  }
+
   const message = encodeURIComponent(
     'Hello Taimur Bhai (Taimur Real Estate)! I am looking for property in Bhiwandi. Please share available flat / gala options.'
   );

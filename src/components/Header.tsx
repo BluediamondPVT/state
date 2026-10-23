@@ -8,11 +8,38 @@ import { AGENCY_CONFIG } from '@/data/properties';
 
 export default function Header() {
   const pathname = usePathname();
+  if (pathname?.startsWith('/admin') || pathname === '/login') {
+    return null;
+  }
   const isHomePage = pathname === '/';
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [propertyDropdownOpen, setPropertyDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [counts, setCounts] = useState<{
+    total: number;
+    byType: Record<string, number>;
+    byDeal: Record<string, number>;
+  }>({
+    total: 6,
+    byType: { '1 BHK': 2, '2 BHK': 1, '3 BHK': 1, '1 RK': 1, 'Commercial Gala': 1 },
+    byDeal: { 'Heavy Deposit': 1, 'Low Downpayment': 1, 'For Sale': 3, 'For Rent': 1 },
+  });
+
+  useEffect(() => {
+    fetch('/api/properties/counts')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          setCounts({
+            total: data.total || 6,
+            byType: data.byType || {},
+            byDeal: data.byDeal || {},
+          });
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -259,19 +286,24 @@ export default function Header() {
                           className={`dropdown-menu shadow-lg border-0 py-2 ${
                             propertyDropdownOpen ? 'show d-block' : ''
                           }`}
-                          style={{ minWidth: '240px', borderRadius: '8px' }}
+                          style={{ minWidth: '260px', borderRadius: '8px' }}
                         >
                           <li>
                             <Link
                               href="/properties"
-                              className="dropdown-item py-2 fw-semibold"
+                              className="dropdown-item py-2 fw-semibold d-flex align-items-center justify-content-between"
                               onClick={() => {
                                 setPropertyDropdownOpen(false);
                                 setMobileMenuOpen(false);
                               }}
                             >
-                              <i className="fa-solid fa-border-all me-2 text-muted"></i>{' '}
-                              All Properties in Bhiwandi
+                              <span>
+                                <i className="fa-solid fa-border-all me-2 text-muted"></i>{' '}
+                                All Properties
+                              </span>
+                              <span className="badge rounded-pill bg-light text-dark border ms-2">
+                                {counts.total}
+                              </span>
                             </Link>
                           </li>
                           <li>
@@ -280,62 +312,82 @@ export default function Header() {
                           <li>
                             <Link
                               href="/properties?type=1+BHK"
-                              className="dropdown-item py-2"
+                              className="dropdown-item py-2 d-flex align-items-center justify-content-between"
                               onClick={() => {
                                 setPropertyDropdownOpen(false);
                                 setMobileMenuOpen(false);
                               }}
                             >
-                              <i
-                                className="fa-solid fa-bed me-2"
-                                style={{ color: '#aa8453' }}
-                              ></i>{' '}
-                              1 BHK Flats
+                              <span>
+                                <i
+                                  className="fa-solid fa-bed me-2"
+                                  style={{ color: '#aa8453' }}
+                                ></i>{' '}
+                                1 BHK Flats
+                              </span>
+                              <span className="badge rounded-pill bg-light text-muted border ms-2">
+                                {counts.byType['1 BHK'] || 0}
+                              </span>
                             </Link>
                           </li>
                           <li>
                             <Link
                               href="/properties?type=2+BHK"
-                              className="dropdown-item py-2"
+                              className="dropdown-item py-2 d-flex align-items-center justify-content-between"
                               onClick={() => {
                                 setPropertyDropdownOpen(false);
                                 setMobileMenuOpen(false);
                               }}
                             >
-                              <i
-                                className="fa-solid fa-couch me-2"
-                                style={{ color: '#aa8453' }}
-                              ></i>{' '}
-                              2 BHK Flats
+                              <span>
+                                <i
+                                  className="fa-solid fa-couch me-2"
+                                  style={{ color: '#aa8453' }}
+                                ></i>{' '}
+                                2 BHK Flats
+                              </span>
+                              <span className="badge rounded-pill bg-light text-muted border ms-2">
+                                {counts.byType['2 BHK'] || 0}
+                              </span>
                             </Link>
                           </li>
                           <li>
                             <Link
                               href="/properties?type=3+BHK"
-                              className="dropdown-item py-2"
+                              className="dropdown-item py-2 d-flex align-items-center justify-content-between"
                               onClick={() => {
                                 setPropertyDropdownOpen(false);
                                 setMobileMenuOpen(false);
                               }}
                             >
-                              <i
-                                className="fa-solid fa-hotel me-2"
-                                style={{ color: '#aa8453' }}
-                              ></i>{' '}
-                              3 BHK Luxury Flats
+                              <span>
+                                <i
+                                  className="fa-solid fa-hotel me-2"
+                                  style={{ color: '#aa8453' }}
+                                ></i>{' '}
+                                3 BHK Luxury Flats
+                              </span>
+                              <span className="badge rounded-pill bg-light text-muted border ms-2">
+                                {counts.byType['3 BHK'] || 0}
+                              </span>
                             </Link>
                           </li>
                           <li>
                             <Link
                               href="/properties?type=1+RK"
-                              className="dropdown-item py-2"
+                              className="dropdown-item py-2 d-flex align-items-center justify-content-between"
                               onClick={() => {
                                 setPropertyDropdownOpen(false);
                                 setMobileMenuOpen(false);
                               }}
                             >
-                              <i className="fa-solid fa-door-open me-2 text-secondary"></i>{' '}
-                              1 RK Budget Rooms
+                              <span>
+                                <i className="fa-solid fa-door-open me-2 text-secondary"></i>{' '}
+                                1 RK Budget Rooms
+                              </span>
+                              <span className="badge rounded-pill bg-light text-muted border ms-2">
+                                {counts.byType['1 RK'] || 0}
+                              </span>
                             </Link>
                           </li>
                           <li>
@@ -344,43 +396,57 @@ export default function Header() {
                           <li>
                             <Link
                               href="/properties?deal=Heavy+Deposit"
-                              className="dropdown-item py-2 fw-semibold"
+                              className="dropdown-item py-2 fw-semibold d-flex align-items-center justify-content-between"
                               style={{ color: '#d97706' }}
                               onClick={() => {
                                 setPropertyDropdownOpen(false);
                                 setMobileMenuOpen(false);
                               }}
                             >
-                              <i className="fa-solid fa-money-bill-wave me-2"></i>{' '}
-                              Heavy Deposit Flats (Zero Rent)
+                              <span>
+                                <i className="fa-solid fa-money-bill-wave me-2"></i>{' '}
+                                Heavy Deposit (Zero Rent)
+                              </span>
+                              <span className="badge rounded-pill bg-warning-subtle text-warning-emphasis border border-warning-subtle ms-2">
+                                {counts.byDeal['Heavy Deposit'] || 0}
+                              </span>
                             </Link>
                           </li>
                           <li>
                             <Link
                               href="/properties?deal=Low+Downpayment"
-                              className="dropdown-item py-2 fw-semibold"
+                              className="dropdown-item py-2 fw-semibold d-flex align-items-center justify-content-between"
                               style={{ color: '#059669' }}
                               onClick={() => {
                                 setPropertyDropdownOpen(false);
                                 setMobileMenuOpen(false);
                               }}
                             >
-                              <i className="fa-solid fa-tags me-2"></i> Low
-                              Downpayment Flats
+                              <span>
+                                <i className="fa-solid fa-tags me-2"></i> Low Downpayment
+                              </span>
+                              <span className="badge rounded-pill bg-success-subtle text-success-emphasis border border-success-subtle ms-2">
+                                {counts.byDeal['Low Downpayment'] || 0}
+                              </span>
                             </Link>
                           </li>
                           <li>
                             <Link
                               href="/properties?type=Commercial+Gala"
-                              className="dropdown-item py-2 fw-semibold"
+                              className="dropdown-item py-2 fw-semibold d-flex align-items-center justify-content-between"
                               style={{ color: '#2563eb' }}
                               onClick={() => {
                                 setPropertyDropdownOpen(false);
                                 setMobileMenuOpen(false);
                               }}
                             >
-                              <i className="fa-solid fa-warehouse me-2"></i>{' '}
-                              Commercial Gala &amp; Godowns
+                              <span>
+                                <i className="fa-solid fa-warehouse me-2"></i>{' '}
+                                Commercial Galas &amp; Godowns
+                              </span>
+                              <span className="badge rounded-pill bg-primary-subtle text-primary-emphasis border border-primary-subtle ms-2">
+                                {counts.byType['Commercial Gala'] || 0}
+                              </span>
                             </Link>
                           </li>
                         </ul>

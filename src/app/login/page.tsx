@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import LoginBanner from '@/components/auth/LoginBanner';
 import LoginFeaturesCard from '@/components/auth/LoginFeaturesCard';
 import LoginFormCard from '@/components/auth/LoginFormCard';
 
 export const metadata = {
-  title: 'Agent Login | Bhiwandi Estate - Partner & Inventory Desk',
+  title: 'Admin Login | Taimur Real Estate — Bhiwandi Inventory Desk',
   description:
-    'Secure portal for authorized Bhiwandi Estate agents, inventory managers, and channel partners.',
+    'Secure portal for authorized Taimur Real Estate agents, inventory managers, and staff in Bhiwandi.',
 };
 
 export default function LoginPage() {
@@ -26,7 +26,16 @@ export default function LoginPage() {
 
             {/* Right Authentication Form */}
             <div className="col-lg-5 col-md-6">
-              <LoginFormCard />
+              <Suspense
+                fallback={
+                  <div className="card shadow-sm border-0 rounded-4 p-5 text-center bg-white">
+                    <i className="fa-solid fa-spinner fa-spin fs-2 text-muted mb-3"></i>
+                    <p className="text-muted small">Loading login form...</p>
+                  </div>
+                }
+              >
+                <LoginFormCard />
+              </Suspense>
             </div>
           </div>
         </div>

@@ -9,18 +9,13 @@ export const metadata = {
 
 export default function AddPropertyPage() {
   return (
-    <main className="bg-light min-vh-100">
-      {/* 1. Header Toolbar */}
+    <div>
       <AddPropertyHeader />
-
-      {/* 2. Property Publishing Form */}
-      <div className="container py-4">
-        <div className="row justify-content-center">
-          <div className="col-lg-10">
-            <AddPropertyForm />
-          </div>
+      <div className="row justify-content-center">
+        <div className="col-lg-11 col-xl-10">
+          <AddPropertyForm />
         </div>
       </div>
-    </main>
+    </div>
   );
 }

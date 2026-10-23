@@ -27,11 +27,11 @@ export default function LoginBanner() {
                 className="page-title text-white fw-bold mb-1"
                 style={{ fontFamily: 'Urbanist, sans-serif' }}
               >
-                Agent &amp; Partner Portal
+                Taimur Real Estate Admin &amp; Staff Portal
               </h1>
               <p className="lead text-white-50 mb-0" style={{ maxWidth: '600px' }}>
-                Secure portal for verified Bhiwandi Estate agents, inventory managers, and
-                authorized channel partners.
+                Secure access for authorized Taimur Real Estate staff, inventory managers, and
+                property consultants in Bhiwandi.
               </p>
             </div>
           </div>

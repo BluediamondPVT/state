@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Property } from '@/types/property';
 import { AGENCY_CONFIG } from '@/data/properties';
+import toast from 'react-hot-toast';
 
 interface Props {
   property: Property;
@@ -10,16 +11,57 @@ interface Props {
 
 export default function PropertyInquirySidebar({ property }: Props) {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
+  const [message, setMessage] = useState(
+    `Hi, I would like to schedule a site visit for "${property.title}" in ${property.locality}.`
+  );
 
   const whatsappInquiry = encodeURIComponent(
     `Hello Taimur Bhai (Taimur Real Estate)! I want to visit/know more about "${property.title}" listed for ${property.price} in ${property.locality}. Please schedule a site visit.`
   );
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+
+    if (!name.trim() || !phone.trim()) {
+      toast.error('Please enter both your name and phone number');
+      return;
+    }
+
+    setIsSubmitting(true);
+    const toastId = toast.loading('Sending inquiry to Taimur Real Estate...');
+
+    try {
+      const res = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name.trim(),
+          phone: phone.trim(),
+          propertyId: property.id,
+          locality: property.locality,
+          type: property.type,
+          message: message.trim(),
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        toast.error(data.error || 'Failed to submit inquiry', { id: toastId });
+        setIsSubmitting(false);
+        return;
+      }
+
+      toast.success('Inquiry received! We will call you within 15 minutes.', { id: toastId });
+      setSubmitted(true);
+    } catch {
+      toast.error('Network error. Please try again or WhatsApp directly.', { id: toastId });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -35,7 +77,7 @@ export default function PropertyInquirySidebar({ property }: Props) {
             alignItems: 'center',
             justifyContent: 'center',
             color: '#fff',
-            fontSize: '22px'
+            fontSize: '22px',
           }}
         >
           <i className="fa-solid fa-user-tie"></i>
@@ -83,7 +125,7 @@ export default function PropertyInquirySidebar({ property }: Props) {
           <i className="fa-solid fa-circle-check text-success fs-3 mb-2"></i>
           <h6 className="fw-bold text-dark mb-1">Callback Requested!</h6>
           <p className="small text-muted mb-0">
-            Thank you {name}. Our consultant will call you at {phone} within 15 minutes.
+            Thank you {name}. Taimur Real Estate will call you at {phone} within 15 minutes.
           </p>
         </div>
       ) : (
@@ -94,6 +136,7 @@ export default function PropertyInquirySidebar({ property }: Props) {
               className="form-control form-control-sm"
               placeholder="Your Full Name"
               required
+              disabled={isSubmitting}
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -104,6 +147,7 @@ export default function PropertyInquirySidebar({ property }: Props) {
               className="form-control form-control-sm"
               placeholder="Your WhatsApp / Phone Number"
               required
+              disabled={isSubmitting}
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
             />
@@ -112,15 +156,24 @@ export default function PropertyInquirySidebar({ property }: Props) {
             <textarea
               className="form-control form-control-sm"
               rows={3}
-              defaultValue={`Hi, I would like to schedule a site visit for "${property.title}" in ${property.locality}.`}
+              disabled={isSubmitting}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             />
           </div>
           <button
             type="submit"
+            disabled={isSubmitting}
             className="btn w-100 py-2 fw-semibold text-white"
             style={{ backgroundColor: '#aa8453', borderRadius: '6px' }}
           >
-            Request Callback
+            {isSubmitting ? (
+              <span>
+                <i className="fa-solid fa-spinner fa-spin me-1"></i> Sending...
+              </span>
+            ) : (
+              'Request Free Callback'
+            )}
           </button>
         </form>
       )}

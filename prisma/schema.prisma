@@ -1,0 +1,71 @@
+// Prisma schema for Taimur Real Estate (Bhiwandi)
+// Database: MongoDB Atlas
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+// Admin & Staff Authentication
+model User {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  name         String
+  email        String   @unique
+  passwordHash String
+  role         String   @default("admin") // "admin" | "superadmin"
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+// Dynamic Property Listings
+model Property {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  slug             String   @unique
+  title            String
+  type             String   // "1 BHK", "2 BHK", "3 BHK", "1 RK", "Commercial Gala", "Shop", "Warehouse / Godown"
+  dealType         String   // "For Sale", "For Rent", "Heavy Deposit", "Low Downpayment"
+  price            String   // "₹34.50 Lakhs"
+  priceNumeric     Float    // 3450000
+  priceLabel       String?  // "Negotiable (Loan Available)"
+  locality         String   // "Dhamankar Naka", "Millat Nagar 1 & 2", "Chavindra", etc.
+  city             String   @default("Bhiwandi")
+  carpetArea       String   // "685 Sq.Ft"
+  superArea        String?  // "920 Sq.Ft"
+  bedrooms         Int      @default(0)
+  bathrooms        Int      @default(0)
+  balconies        Int      @default(0)
+  floor            String   // "Middle Floor of 12-Storey Tower"
+  furnishing       String   // "Unfurnished" | "Semi-Furnished" | "Fully Furnished"
+  waterSupply      String   // "24 Hours Municipal Water + Storage"
+  possessionStatus String   @default("Ready to Move") // "Ready to Move" | "Under Construction"
+  loanAvailable    Boolean  @default(false)
+  featured         Boolean  @default(false)
+  published        Boolean  @default(true)
+  image            String   // Primary cover image (Cloudflare R2 or local asset)
+  gallery          String[] @default([])
+  description      String
+  highlights       String[] @default([])
+  nearbyLandmarks  String[] @default([])
+  viewsCount       Int      @default(0)
+  inquiriesCount   Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
+
+// Client Inquiries & Site Visit Requests
+model Lead {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  name       String
+  phone      String
+  propertyId String?
+  locality   String?
+  type       String?  // Interested in "2 BHK", "Heavy Deposit", "Warehouse", etc.
+  message    String?
+  status     String   @default("new") // "new" | "contacted" | "scheduled_visit" | "closed"
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}

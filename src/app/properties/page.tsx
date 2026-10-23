@@ -6,9 +6,13 @@ import PropertiesHeaderBanner from '@/components/properties/PropertiesHeaderBann
 import PropertyFilters from '@/components/properties/PropertyFilters';
 import PropertiesListGrid from '@/components/properties/PropertiesListGrid';
 import { PROPERTIES } from '@/data/properties';
+import { Property } from '@/types/property';
 
 function PropertiesContent() {
   const searchParams = useSearchParams();
+
+  const [properties, setProperties] = useState<Property[]>(PROPERTIES);
+  const [loading, setLoading] = useState(true);
 
   const [selectedType, setSelectedType] = useState<string>(searchParams.get('type') || '');
   const [selectedLocality, setSelectedLocality] = useState<string>(searchParams.get('locality') || '');
@@ -16,12 +20,29 @@ function PropertiesContent() {
   const [searchTerm, setSearchTerm] = useState<string>('');
 
   useEffect(() => {
+    async function loadProperties() {
+      try {
+        const res = await fetch('/api/properties');
+        const data = await res.json();
+        if (data.success && Array.isArray(data.properties) && data.properties.length > 0) {
+          setProperties(data.properties);
+        }
+      } catch (err) {
+        console.warn('Failed to fetch dynamic properties, using curated list:', err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadProperties();
+  }, []);
+
+  useEffect(() => {
     if (searchParams.get('type')) setSelectedType(searchParams.get('type') || '');
     if (searchParams.get('locality')) setSelectedLocality(searchParams.get('locality') || '');
     if (searchParams.get('deal')) setSelectedDeal(searchParams.get('deal') || '');
   }, [searchParams]);
 
-  const filtered = PROPERTIES.filter((p) => {
+  const filtered = properties.filter((p) => {
     if (selectedType && p.type !== selectedType) return false;
     if (selectedLocality && p.locality !== selectedLocality) return false;
     if (selectedDeal && p.dealType !== selectedDeal) return false;
@@ -68,11 +89,19 @@ function PropertiesContent() {
           <div className="col-lg-9">
             <div className="d-flex justify-content-between align-items-center mb-3">
               <span className="small text-muted fw-semibold">
-                Available Units: <strong>{filtered.length}</strong>
+                Available Verified Units:{' '}
+                <strong>{loading ? 'Updating...' : filtered.length}</strong>
               </span>
             </div>
 
-            <PropertiesListGrid properties={filtered} resetFilters={resetFilters} />
+            {loading ? (
+              <div className="card border-0 shadow-sm rounded-4 p-5 text-center bg-white">
+                <i className="fa-solid fa-spinner fa-spin fs-2 text-muted mb-3"></i>
+                <p className="text-muted small">Loading live inventory from Taimur Real Estate...</p>
+              </div>
+            ) : (
+              <PropertiesListGrid properties={filtered} resetFilters={resetFilters} />
+            )}
           </div>
         </div>
       </div>
